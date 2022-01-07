@@ -1,0 +1,54 @@
+000010211018     A*%%TS  SD  20211018  144300  SFERRELL    REL-V7R3M0  5770-WDS
+000020211018     A*%%EC
+000030211018     A                                      DSPSIZ(24 80 *DS3)
+000040211018     A                                      PRINT
+000050211018     A                                      INDARA
+000060211018     A          R SFLREC                    SFL
+000070211018     A*%%TS  SD  20211018  144300  SFERRELL    REL-V7R3M0  5770-WDS
+000080211019     A*  25                                  SFLNXTCHG
+000082211022     A                                  6  1'Event number:'
+000083211022     A                                      COLOR(WHT)
+000084211022     A            EVRRN          4S 0O  6 15
+000085211022     A                                      COLOR(BLU)
+000101211022     A                                  7  1'Headline'
+000102211022     A                                      COLOR(WHT)
+000104211025     A            EVHEADLN     150A  O  8  1
+000105211025     A                                 10  1'Description'
+000106211022     A                                      COLOR(WHT)
+000110211025     A            EVDESC       850A  O 11  1
+000112211022      *
+000120211018     A          R SFLCTRL                   SFLCTL(SFLREC)
+000130211018     A*%%TS  SD  20211018  144300  SFERRELL    REL-V7R3M0  5770-WDS
+000131211021     A                                      SFLSIZ(0020)
+000132211021     A                                      SFLPAG(0001)
+000140211018     A                                      CA03(03 'Exit')
+000141211019     A                                      CA05(05 'Refresh')
+000142211021     A                                      PAGEUP(25)
+000143211021     A                                      PAGEDOWN(26)
+000144211019     A                                      OVERLAY
+000150211022     A  31                                  SFLDSP
+000160211019     A  30                                  SFLDSPCTL
+000170211019     A N30                                  SFLCLR
+000180211019     A  32                                  SFLEND(*MORE)
+000230211018     A                                  1  2USER
+000231211019     A            PGMNAME       10A  O  2  2
+000240211018     A                                  1 23'Weather alerts for your State'
+000250211018     A                                      COLOR(WHT)
+000260211018     A                                  1 63DATE
+000270211018     A                                      EDTCDE(Y)
+000280211018     A                                  2 63TIME
+000290211022     A                                  4  3'Your State . .:'
+000291211022     A                                      COLOR(WHT)
+000300211022     A            FLDSTATE       2A  B  4 19
+000301211022     A            SFSTATE       14A  O  4 23
+000302211022     A                                      COLOR(WHT)
+000350211018     A          R FOOTER
+000360211018     A*%%TS  SD  20211018  144300  SFERRELL    REL-V7R3M0  5770-WDS
+000370211018     A                                      CA03(03 'Exit')
+000380211018     A                                      CA05(05 'Refresh')
+000390211018     A                                      OVERLAY
+000400211018     A                                 23  4'F3=Exit'
+000410211018     A                                      COLOR(BLU)
+000420211018     A                                 23 17'F5=Refresh'
+000430211018     A                                      COLOR(BLU)
+000440211018     A                                 23 28' '
