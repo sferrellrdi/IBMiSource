@@ -1,0 +1,14 @@
+000100211117  // Simple call to rpgle DEMO5 using FL for the state
+000200110823
+000300110823#include <stdio.h>
+000400211117#pragma linkage(DEMO5, OS, nowiden)
+000500211117
+000600211117void DEMO5(char *);
+000700211117
+000800211117int main( int argc, char *argv[] ) {
+000900211117  char *state = "FL";
+001000211117
+001100211117  DEMO5(state);
+001200211117
+001300211117  return;
+001400110823}
